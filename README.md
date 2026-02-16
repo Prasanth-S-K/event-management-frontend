@@ -1,16 +1,128 @@
-# React + Vite
+# 🎉 Event Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Event Management Application built using the MERN stack.  
+Users can create events, register for events, cancel registrations, and manage their own events.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Links
 
-## React Compiler
+🔗 Frontend: https://event-management-frontend-zeta-nine.vercel.app/  
+🔗 Backend: https://event-management-backend-ysg0.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+- React (Vite)
+- Axios
+- React Router
+- Bootstrap / CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB (MongoDB Atlas)
+- Mongoose
+- JWT Authentication
+
+### Deployment
+
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+
+---
+
+## ✨ Features
+
+### 👤 Authentication
+
+- User registration
+- User login
+- JWT-based authentication
+- Protected routes
+
+### 📅 Event Management
+
+- Create event
+- Edit event
+- Delete event
+- Pagination support
+- Capacity management
+
+### 🎟 Event Registration
+
+- Register for event
+- Cancel registration
+- Prevent duplicate registrations
+- Capacity validation
+- Prevent registration for past events
+
+### 📊 Dashboard
+
+- View "My Registrations"
+- Event creator can view registered users
+
+---
+
+## 📂 Project Structure
+
+root
+├── client (React frontend)
+└── server (Node/Express backend)
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (.env)
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:5173
+
+---
+
+## 🧪 Run Locally
+
+### Backend
+
+cd server
+npm install
+node seed/seedEvents.js
+npm run dev
+
+### Frontend
+
+cd client
+npm install
+npm run dev
+
+---
+
+## 📌 Future Improvements
+
+- Admin dashboard with analytics
+- Payment integration
+- Email notifications
+- Event image uploads
+- Search & filtering
+- UI improvements
+
+---
+
+## 👨‍💻 Author
+
+Prasanth-S-K
+GitHub: https://github.com/Prasanth-S-K
+
+---
+
+## 📜 License
+
+This project is for educational purposes.
