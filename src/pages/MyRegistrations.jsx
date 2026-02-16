@@ -16,10 +16,12 @@ const MyRegistrations = () => {
       try {
         setLoading(true);
         const res = await API.get("/api/registrations/me", {
-          // const res = await API.get("/api/registrations/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
-        setRegistrations(res.data);
+
+        // Filter out registrations where event is null
+        const validRegistrations = res.data.filter((r) => r.event);
+        setRegistrations(validRegistrations);
       } catch (err) {
         console.error(err);
       } finally {
@@ -95,10 +97,12 @@ const MyRegistrations = () => {
                   <p className="event-description">{reg.event.description}</p>
 
                   <div className="event-details">
-                    {reg.event.date && (
+                    {reg.event.dateTime && (
                       <div className="detail-item">
                         <span className="detail-icon">📅</span>
-                        <span>Event Date: {formatDate(reg.event.date)}</span>
+                        <span>
+                          Event Date: {formatDate(reg.event.dateTime)}
+                        </span>
                       </div>
                     )}
                     {reg.event.location && (
