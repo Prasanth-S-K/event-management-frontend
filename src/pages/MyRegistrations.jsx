@@ -15,7 +15,7 @@ const MyRegistrations = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await API.get("api/registrations/me", {
+        const res = await API.get("/api/registrations/me", {
           // const res = await API.get("/api/registrations/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
