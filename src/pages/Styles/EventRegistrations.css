@@ -1,0 +1,337 @@
+/* EventRegistrations.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    sans-serif;
+  background: #f5f5f5;
+}
+
+.event-registrations-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header-section h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stats-card {
+  background: #4a90e2;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stats-card span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stats-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.back-button {
+  background: transparent;
+  color: #4a90e2;
+  border: 1px solid #4a90e2;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #4a90e2;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 30px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin: 30px 0;
+}
+
+.empty-state-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.user-card {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #eee;
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-color: #4a90e2;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  background: #4a90e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-info h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.user-info p {
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.registration-date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 60px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  text-align: center;
+  padding: 40px;
+  background: #ffebee;
+  border-radius: 6px;
+  margin: 30px 0;
+}
+
+.error-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.error-container h2 {
+  color: #c62828;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.error-container p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background: #b71c1c;
+}
+
+.bottom-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.events-button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.events-button:hover {
+  background: #357abd;
+}
+
+@media (max-width: 768px) {
+  .event-registrations-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-section h2 {
+    font-size: 22px;
+  }
+
+  .stats-card {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-card {
+    padding: 12px;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-registrations-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .header-section h2 {
+    font-size: 20px;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .user-info h4 {
+    font-size: 16px;
+  }
+
+  .user-info p {
+    justify-content: center;
+  }
+
+  .registration-date {
+    justify-content: center;
+  }
+
+  .bottom-actions {
+    flex-direction: column;
+  }
+
+  .events-button {
+    width: 100%;
+  }
+}
+
+.user-info p::before {
+  content: "✉";
+  color: #4a90e2;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.registration-date::before {
+  content: "📅";
+  margin-right: 4px;
+  font-size: 11px;
+}
