@@ -1,4 +1,4 @@
-// pages/CreateEvent.jsx
+// root\client\src\pages\CreateEvent.jsx
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

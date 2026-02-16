@@ -1,4 +1,4 @@
-// pages/EventRegistrations.jsx
+// root\client\src\pages\EventRegistrations.jsx
 
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const EventRegistrations = () => {
         setRegistrations(registrationsRes.data);
 
         try {
-          const eventRes = await API.get(`/events/${eventId}`, {
+          const eventRes = await API.get(`/api/events/${eventId}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setEventDetails(eventRes.data);

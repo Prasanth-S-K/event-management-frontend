@@ -1,4 +1,4 @@
-// client/src/pages/Events.jsx
+// root\client\src\pages\Events.jsx
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

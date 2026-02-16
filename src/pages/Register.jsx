@@ -1,4 +1,4 @@
-// client/src/pages/Register.jsx
+// root\client\src\pages\Register.jsx
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";

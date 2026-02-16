@@ -1,4 +1,4 @@
-// pages/EditEvent.jsx
+// root\client\src\pages\EditEvent.jsx
 
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ const EditEvent = () => {
     const fetchEvent = async () => {
       try {
         setLoading(true);
-        const res = await API.get(`/events/${id}`);
+        const res = await API.get(`/api/events/${id}`);
         const event = res.data;
 
         const formattedEvent = {
